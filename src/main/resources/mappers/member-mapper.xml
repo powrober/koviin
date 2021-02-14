@@ -3,49 +3,49 @@
 <mapper namespace="memberMapper">
 	
 	<resultMap id="memberResultSet" type="Member">
-		<id property="id" column="ID"/>
-		<result property="pwd" column="PWD"/>
-		<result property="name" column="NAME"/>
-		<result property="nickname" column="NICKNAME"/>
-		<result property="email" column="EMAIL"/>
-		<result property="sex" column="SEX"/>
-		<result property="phone" column="PHONE"/>
-		<result property="address" column="ADDRESS"/>
-		<result property="enrollDate" column="ENROLLDATE"/>
-		<result property="updateDate" column="UPDATEDATE"/>
-		<result property="mStatus" column="MSTATUS"/>
+		<id property="userno" column="user_no"/>
+		<result property="userid" column="user_id"/>
+		<result property="userpwd" column="user_pwd"/>
+		<result property="usernm" column="user_nm"/>
+		<result property="nickname" column="nick_name"/>
+		<result property="birthday" column="birthday"/>
+		<result property="gender" column="gender"/>
+		<result property="phone" column="phone"/>
+		<result property="email" column="email"/>
+		<result property="address" column="address"/>
+		<result property="country" column="country"/>
+		<result property="joindate" column="joindate"/>
+		<result property="usernow" column="user_now"/>
+		<result property="userlv" column="user_lv"/>
+		<result property="etc" column="etc"/>
+		<result property="userlock" column="user_lock"/>
 	</resultMap>
 
 	<select id="loginMember" parameterType="Member" resultMap="memberResultSet">
-		<!-- 암호화 전 -->
-		<!-- SELECT
-		       *
-		  FROM MEMBER
-		 WHERE ID = #{ id }
-		   AND PWD = #{ pwd }
-		   AND MSTATUS='Y'  -->
-		<!-- 암호화 후 -->
 		SELECT
 			   *
 	      FROM MEMBER
-	     WHERE ID = #{ id }
-	       AND MSTATUS= 'Y'
+	     WHERE USERID = #{ user_id }
+	       AND USERLOCK= 'Y'
 	</select>
 
 	<insert id="insertMember" parameterType="Member">
 		INSERT 
 		  INTO MEMBER
 		VALUES ( 
-				 #{ id }
-		       , #{ pwd }
-		       , #{ name }
-		       , #{ nickname }
-		       , #{ email }
-		       , #{ sex }
+				 #{ user_id }
+		       , #{ user_pwd }
+		       , #{ user_nm }
+		       , #{ nick_name }
+		       , #{ birthday }
+		       , #{ gender }
 		       , #{ phone }
-		       , #{ address }
+		       , #{ email }
+		       , #{ country }
 		       , sysdate
-		       , sysdate
+		       , default
+		       , default
+		       , null
 		       , default		
       	       )
 	</insert>
@@ -53,24 +53,21 @@
 	<update id="deleteMember" parameterType="Member">
 		UPDATE
 		       MEMBER
-		   SET MSTATUS='N'
-		 WHERE ID = #{ id }
+		   SET USERLOCK='N'
+		 WHERE USERID = #{ user_id }
 	</update>
 	
 	<update id="updateMember" parameterType="Member">
 		UPDATE 
 		       MEMBER
 		   SET 
-		   	<if test="pwd == null">
-		       PWD = #{ pwd },
+		   	<if test="user_pwd == null">
+		       USERPWD = #{ user_pwd },
 		    </if>
-		       NAME = #{ name },
-		       NICKNAME = #{ nickname },
-		       EMAIL = #{ email },
+		       USERPWD = #{ user_pwd },
 		       PHONE = #{ phone },
-		       ADDRESS = #{ address },
-		       UPDATEDATE = SYSDATE
-		 WHERE ID = #{ id }  
+		       <!--  UPDATEDATE = SYSDATE -->
+		 WHERE USERID = #{ user_id }  
 	</update>
 	
 	<!-- 아이디 찾기 -->
@@ -78,7 +75,7 @@
 		SELECT
 		       *
 		  FROM MEMBER
-		 WHERE NAME = #{ name }
+		 WHERE USERNM = #{ user_nm }
 		   AND EMAIL = #{ email }
 	</select>
 	
@@ -87,20 +84,24 @@
 		SELECT
 		       *
 		  FROM MEMBER
-		 WHERE ID = #{ id }
+		 WHERE USERID = #{ user_id }
 		   AND EMAIL = #{ email }
 	</select>
 	
 	<!-- 비밀번호 재설정 -->
 	<update id="setTempPw" parameterType="Member">
-		update member set pwd = #{ pwd } where id = #{ id }
+		UPDATE MEMBER
+		   SET
+	   USERPWD = #{ user_pwd }
+	     WHERE 
+	    USERID = #{ user_id }
 	</update>
 	
 	<select id="idCheck" parameterType="string" resultType="_int">
 		SELECT
 			COUNT(*)
 		FROM MEMBER
-		WHERE id = #{ id }
+		WHERE USERID = #{ user_id }
 	</select>
 	
 	

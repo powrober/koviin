@@ -5,55 +5,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css"
-	href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
-<link rel="stylesheet" href="/koviin/resources/css/bootstrap.css">
-<link rel="stylesheet" href="/koviin/resources/css/fonts.css">
-<link rel="stylesheet" href="/koviin/resources/css/style.css">
-
-<style>
-.ie-panel {
-	display: none;
-	background: #212121;
-	padding: 10px 0;
-	box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
-	clear: both;
-	text-align: center;
-	position: relative;
-	z-index: 1;
-}
-
-html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
-	display: block;
-}
-</style>
-
-<script src="/koviin/resources/js/3ts2ksMwXvKRuG480KNifJ2_JNM.js"></script>
-<!-- <script src="/koviin/resources/js/core.min.js"></script> -->
-<!-- <script src="/koviin/resources/js/jnm.js"></script> -->
-<script src="/koviin/resources/js/jquery-3.5.1.min.js"></script>
-<script src="/koviin/resources/js/min.js"></script>
-<script src="/koviin/resources/js/script.js"></script>
-<script src="/koviin/resources/js/test.js"></script>
-
-<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push([ '_setAccount', 'UA-7078796-5' ]);
-	_gaq.push([ '_trackPageview' ]);
-	(function() {
-		var ga = document.createElement('script');
-		ga.type = 'text/javascript';
-		ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
-				: 'http://www')
-				+ '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(ga, s);
-	})();
-</script>
-
 </head>
 
 <body>
@@ -76,7 +27,8 @@ html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
 	</div> -->
 
 	<div class="page">
-		<header class="section page-header">
+	<h1>test</h1>
+		<div class="section page-header">
 
 			<div class="rd-navbar-wrap">
 				<nav class="rd-navbar rd-navbar-corporate"
@@ -175,188 +127,181 @@ html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
 							</div>
 						</div>
 					</div>
-					
-					<c:url var="myInfo" value="myInfo.do"/>
-					<c:url var="logout" value="logout.do"/>
-					<c:url var="nlist" value="nlist.do"/>
+
+					<c:url var="myInfo" value="myInfo.do" />
+					<c:url var="logout" value="logout.do" />
+					<c:url var="nlist" value="nlist.do" />
 					<c:url var="blist" value="blist.do">
 						<c:param name="page" value="1" />
 					</c:url>
-					
+
 					<div class="rd-navbar-main-outer">
 						<div class="rd-navbar-main">
 							<div class="rd-navbar-nav-wrap">
 
 								<section>
-
-									<%-- <%
-										//	System.out.println("jsp" + loginMember);
-									// System.out.println("lv" + loginMember.getUserLv());
-									if (loginMember != null && loginMember.getUserLv().charAt(0) == 'A') {
-										//if (loginMember != null) {
-									%> --%>
-									<ul class="rd-navbar-nav">
-										<!-- 관리자 메뉴바 -->
-										<li class="rd-nav-item active"><a class="rd-nav-link"
-											href="/first/index.jsp">Home</a></li>
-										<li class="rd-nav-item"><a class="rd-nav-link" href="#">가맹점</a>
-											<ul class="rd-menu rd-navbar-dropdown">
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/family/food.jsp"> 음식</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">숙박</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">병원</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">선물</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">서비스</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">마사지</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">유흥</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/fmember/fjoin.jsp">가맹/광고 문의</a></li>
-											</ul></li>
-										<li class="rd-nav-item"><a class="rd-nav-link" href="#">여행편의
-												제공</a>
-											<ul class="rd-menu rd-navbar-dropdown">
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/service/cntaxi.jsp">공항택시</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/service/cnplan.jsp">여행플랜</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/service/cnguide.jsp">가이드 지원</a></li>
-											</ul></li>
-										<li class="rd-nav-item"><a class="rd-nav-link" href="#">공지사항</a>
-											<ul class="rd-menu rd-navbar-dropdown">
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="/first/nlist">공지사항</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="/first/views/Etc/event.jsp">이벤트</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="/first/views/Etc/faq.jsp">FAQ</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="/first/views/Etc/ask.jsp">1:1
-														문의하기</a></li>
-											</ul></li>
-									</ul>
-								<%-- 	<%
-										}
-									if (loginMember != null && loginMember.getUserLv().charAt(0) == 'B') {
-										// if (loginMember != null) {
-									%> --%>
-									<ul class="rd-navbar-nav">
-										<!-- 일반회원 메뉴바 -->
-										<li class="rd-nav-item active"><a class="rd-nav-link"
-											href="/first/index.jsp">Home</a></li>
-										<li class="rd-nav-item"><a class="rd-nav-link" href="#">가맹점</a>
-											<ul class="rd-menu rd-navbar-dropdown">
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/family/food.jsp"> 음식</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">숙박</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">병원</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">선물</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">서비스</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">마사지</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">유흥</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/fmember/fjoin.jsp">가맹/광고 문의</a></li>
-											</ul></li>
-										<li class="rd-nav-item"><a class="rd-nav-link" href="#">여행편의
-												제공</a>
-											<ul class="rd-menu rd-navbar-dropdown">
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/service/cntaxi.jsp">공항택시</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/service/cnplan.jsp">여행플랜</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/service/cnguide.jsp">가이드 지원</a></li>
-											</ul></li>
-										<li class="rd-nav-item"><a class="rd-nav-link" href="#">공지사항</a>
-											<ul class="rd-menu rd-navbar-dropdown">
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="/first/nlist">공지사항</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="/first/views/Etc/event.jsp">이벤트</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="/first/views/Etc/faq.jsp">FAQ</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="/first/views/Etc/ask.jsp">1:1
-														문의하기</a></li>
-											</ul></li>
-									</ul>
-								<%-- 	<%
-										}
-									if (loginFmember != null && loginFmember.getFuserLv().charAt(0) == 'C') {
-										//if (loginFmember != null) {
-									%> --%>
-									<ul class="rd-navbar-nav">
-										<!-- 가맹점 메뉴바 -->
-										<li class="rd-nav-item active"><a class="rd-nav-link"
-											href="/first/index.jsp">Home</a></li>
-										<li class="rd-nav-item"><a class="rd-nav-link" href="#">가맹점</a>
-											<ul class="rd-menu rd-navbar-dropdown">
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/family/food.jsp">음식</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">숙박</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">병원</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">선물</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">서비스</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">마사지</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="#">유흥</a></li>
-											</ul></li>
-										<li class="rd-nav-item"><a class="rd-nav-link" href="#">여행편의
-												제공</a>
-											<ul class="rd-menu rd-navbar-dropdown">
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/service/cntaxi.jsp">공항택시</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/service/cnplan.jsp">여행플랜</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link"
-													href="/first/views/service/cnguide.jsp">가이드 지원</a></li>
-											</ul></li>
-										<li class="rd-nav-item"><a class="rd-nav-link" href="#">공지사항</a>
-											<ul class="rd-menu rd-navbar-dropdown">
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="/first/nlist">공지사항</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="/first/views/Etc/event.jsp">이벤트</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="/first/views/Etc/faq.jsp">
-														FAQ</a></li>
-												<li class="rd-dropdown-item"><a
-													class="rd-dropdown-link" href="/first/views/Etc/ask.jsp">1:1
-														문의하기</a></li>
-											</ul></li>
-									</ul>
-									<%-- <c:if test="${ empty sessionScope.loginUser $$ empty sessionScope.loginFuser}"> --%>
+									<%-- 									<c:if
+										test="${ !empty sessionScope.loginUser && loginUser.getUserlv().charAt(0) == 'A' }">
+										<ul class="rd-navbar-nav">
+											<!-- 관리자 메뉴바 -->
+											<li class="rd-nav-item active"><a class="rd-nav-link"
+												href="/first/index.jsp">Home</a></li>
+											<li class="rd-nav-item"><a class="rd-nav-link" href="#">가맹점</a>
+												<ul class="rd-menu rd-navbar-dropdown">
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/family/food.jsp"> 음식</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">숙박</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">병원</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">선물</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">서비스</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">마사지</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">유흥</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/fmember/fjoin.jsp">가맹/광고 문의</a></li>
+												</ul></li>
+											<li class="rd-nav-item"><a class="rd-nav-link" href="#">여행편의
+													제공</a>
+												<ul class="rd-menu rd-navbar-dropdown">
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/service/cntaxi.jsp">공항택시</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/service/cnplan.jsp">여행플랜</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/service/cnguide.jsp">가이드 지원</a></li>
+												</ul></li>
+											<li class="rd-nav-item"><a class="rd-nav-link" href="#">공지사항</a>
+												<ul class="rd-menu rd-navbar-dropdown">
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="/first/nlist">공지사항</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="/first/views/Etc/event.jsp">이벤트</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="/first/views/Etc/faq.jsp">FAQ</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="/first/views/Etc/ask.jsp">1:1
+															문의하기</a></li>
+												</ul></li>
+										</ul>
+									</c:if>
+									<c:if
+										test="${ !empty sessionScope.loginUser && loginUser.getUserlv().charAt(0) == 'B' }">
+										<ul class="rd-navbar-nav">
+											<!-- 일반회원 메뉴바 -->
+											<li class="rd-nav-item active"><a class="rd-nav-link"
+												href="/first/index.jsp">Home</a></li>
+											<li class="rd-nav-item"><a class="rd-nav-link" href="#">가맹점</a>
+												<ul class="rd-menu rd-navbar-dropdown">
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/family/food.jsp"> 음식</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">숙박</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">병원</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">선물</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">서비스</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">마사지</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">유흥</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/fmember/fjoin.jsp">가맹/광고 문의</a></li>
+												</ul></li>
+											<li class="rd-nav-item"><a class="rd-nav-link" href="#">여행편의
+													제공</a>
+												<ul class="rd-menu rd-navbar-dropdown">
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/service/cntaxi.jsp">공항택시</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/service/cnplan.jsp">여행플랜</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/service/cnguide.jsp">가이드 지원</a></li>
+												</ul></li>
+											<li class="rd-nav-item"><a class="rd-nav-link" href="#">공지사항</a>
+												<ul class="rd-menu rd-navbar-dropdown">
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="/first/nlist">공지사항</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="/first/views/Etc/event.jsp">이벤트</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="/first/views/Etc/faq.jsp">FAQ</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="/first/views/Etc/ask.jsp">1:1
+															문의하기</a></li>
+												</ul></li>
+										</ul>
+									</c:if>
+									<c:if
+										test="${ !empty sessionScope.loginUser && loginUser.getUserlv().charAt(0) == 'C' }">
+										<ul class="rd-navbar-nav">
+											<!-- 가맹점 메뉴바 -->
+											<li class="rd-nav-item active"><a class="rd-nav-link"
+												href="/first/index.jsp">Home</a></li>
+											<li class="rd-nav-item"><a class="rd-nav-link" href="#">가맹점</a>
+												<ul class="rd-menu rd-navbar-dropdown">
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/family/food.jsp">음식</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">숙박</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">병원</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">선물</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">서비스</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">마사지</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="#">유흥</a></li>
+												</ul></li>
+											<li class="rd-nav-item"><a class="rd-nav-link" href="#">여행편의
+													제공</a>
+												<ul class="rd-menu rd-navbar-dropdown">
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/service/cntaxi.jsp">공항택시</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/service/cnplan.jsp">여행플랜</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link"
+														href="/first/views/service/cnguide.jsp">가이드 지원</a></li>
+												</ul></li>
+											<li class="rd-nav-item"><a class="rd-nav-link" href="#">공지사항</a>
+												<ul class="rd-menu rd-navbar-dropdown">
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="/first/nlist">공지사항</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="/first/views/Etc/event.jsp">이벤트</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="/first/views/Etc/faq.jsp">
+															FAQ</a></li>
+													<li class="rd-dropdown-item"><a
+														class="rd-dropdown-link" href="/first/views/Etc/ask.jsp">1:1
+															문의하기</a></li>
+												</ul></li>
+										</ul>
+									</c:if>
+									<c:if
+										test="${ empty sessionScope.loginUser && empty sessionScope.loginFuser}"> --%>
 									<ul class="rd-navbar-nav">
 										<!-- 기본 메뉴바 -->
 										<li class="rd-nav-item active"><a class="rd-nav-link"
@@ -409,14 +354,15 @@ html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
 														문의하기</a></li>
 											</ul></li>
 									</ul>
-<%-- 									</c:if>
- --%>								</section>
+									<%-- 									</c:if>
+ --%>
+								</section>
 
 								<!-- **************************** 메뉴와 로그인 구분 ************************************** -->
 
 								<section>
-<%-- 								<c:if test="${ !empty sessionScope.loginUser $$ !empty sessionScope.loginFuser}">
- --%>									<ul class="rd-navbar-nav">
+									<%-- <c:if test="${ !empty sessionScope.loginUser && !empty sessionScope.loginFuser}">
+									<ul class="rd-navbar-nav">
 										<li class="rd-nav-item"><a class="rd-nav-link"
 											href="/first/views/common/login.jsp">로그인</a></li>
 										<li class="rd-nav-item"><a class="rd-nav-link"
@@ -435,14 +381,11 @@ html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
 													href="/first/views/common/comingsoon.jsp">中國語</a></li>
 											</ul></li>
 									</ul>
-								<%-- 	<%
-										}
-									if (loginMember != null && loginMember.getUserLv().charAt(0) == 'A') { // 관리자 로그인
-										//if (loginMember != null) {
-									%> --%>
+									</c:if>
+									<c:if test="${ !empty sessionScope.loginUser && loginUser.getUserlv().charAt(0) == 'A'}">
 									<ul class="rd-navbar-nav">
-										<li class="rd-nav-link"><c:out value="${ loginUser.name }님 환영합니다!!"/>
-										</li>
+										<li class="rd-nav-link"><c:out
+												value="${ loginUser.name }님 환영합니다!!" /></li>
 										<li class="rd-nav-item"><a class="rd-nav-link" href="#">관리자페이지</a>
 											<ul class="rd-menu rd-navbar-dropdown">
 												<li class="rd-dropdown-item"><a
@@ -455,14 +398,10 @@ html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
 										<li class="rd-nav-item"><a class="rd-nav-link"
 											href="/first/logout">로그아웃</a>
 									</ul>
-									<%-- <%
-										}
-									if (loginMember != null && loginMember.getUserLv().charAt(0) == 'B') { // 일반회원 로그인
-										//if (loginMember != null) {
-									%> --%>
+									</c:if>
+									<c:if test="${ !empty sessionScope.loginUser && loginUser.getUserlv().charAt(0) == 'B'}">
 									<ul class="rd-navbar-nav">
-										<li class="rd-nav-link">환영합니다! &nbsp; 님
-										</li>
+										<li class="rd-nav-link">환영합니다! &nbsp; 님</li>
 										<li class="rd-nav-item"><a class="rd-nav-link"
 											href="/first/views/member/memberDetailView.jsp">마이페이지</a></li>
 										<li class="rd-nav-item"><a class="rd-nav-link"
@@ -481,13 +420,10 @@ html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
 													href="/first/views/common/comingsoon.jsp">中國語</a></li>
 											</ul></li>
 									</ul>
-									<%-- <%
-										}
-									if (loginFmember != null) { // 가맹점 로그인
-									%> --%>
+									</c:if> --%>
+
 									<ul class="rd-navbar-nav">
-										<li class="rd-nav-link">환영합니다! &nbsp; 님
-										</li>
+										<li class="rd-nav-link">환영합니다! &nbsp; 님</li>
 										<li class="rd-nav-item"><a class="rd-nav-link" href="#">가맹점주
 												페이지</a>
 											<ul class="rd-menu rd-navbar-dropdown">
@@ -516,14 +452,13 @@ html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
 													href="/first/views/common/comingsoon.jsp">中國語</a></li>
 											</ul></li>
 									</ul>
-<%-- 									</c:if>
- --%>								</section>
+								</section>
 							</div>
 						</div>
 					</div>
 				</nav>
 			</div>
-		</header>
+		</div>
 	</div>
 
 </body>

@@ -1,15 +1,66 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page session="false"%>
 <html>
 <head>
-	<title>koviin</title>
+<title>koviin</title>
+
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
+<link rel="stylesheet" href="/koviin/resources/css/bootstrap.css">
+<link rel="stylesheet" href="/koviin/resources/css/fonts.css">
+<link rel="stylesheet" href="/koviin/resources/css/style.css">
+
+<style>
+.ie-panel {
+	display: none;
+	background: #212121;
+	padding: 10px 0;
+	box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+	clear: both;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
+	display: block;
+}
+</style>
+
+<!-- <script src="/koviin/resources/js/3ts2ksMwXvKRuG480KNifJ2_JNM.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+	crossorigin="anonymous"></script>
+<!-- <script src="/koviin/resources/js/jnm.js"></script> -->
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- <script src="/koviin/resources/js/min.js"></script> -->
+<script src="/koviin/resources/js/script.js"></script>
+<!-- <script src="/koviin/resources/js/test.js"></script> -->
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push([ '_setAccount', 'UA-7078796-5' ]);
+	_gaq.push([ '_trackPageview' ]);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www')
+				+ '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
 </head>
 <body>
 
-<jsp:include page="/WEB-INF/views/common/header.jsp" />
-
+	<c:import url="/WEB-INF/views/common/header.jsp"/>
+	<jsp:include page="./header.jsp" />
 
 	<section
 		class="section swiper-container swiper-slider swiper-slider-corporate swiper-pagination-style-2"
@@ -124,7 +175,7 @@
 						<%-- <%
 						} else {
 						%> --%>
-							<div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
+						<div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
 							<ul class="list-marked-2 box-categories-list">
 								<li><a href="/koviin/views/service/cntaxi.jsp"><img
 										src="resources/image/airport-taxi.jpg" alt="" width="368"
@@ -319,7 +370,7 @@
 					</ul>
 				</div>
 
-				<section
+				<div
 					class="section section-xl bg-default text-left isotope-wrap">
 					<div class="container">
 						<div class="row row-50 isotope" data-isotope-layout="fitRows"
@@ -332,7 +383,7 @@
 										height="350" /></a>
 									<div class="thumbnail-modern-caption">
 										<h5 class="thumbnail-modern-title">
-											<a href="../familydetails/testfood1.jsp"">맛잇는 라면</a>
+											<a href="../familydetails/testfood1.jsp">맛잇는 라면</a>
 										</h5>
 										<p class="thumbnail-modern-subtitle">1안 : 하노이 미딩(주소정보)</p>
 									</div>
@@ -455,7 +506,8 @@
 							<div class="col-md-6 col-lg-4 isotope-item" data-filter="Type 1">
 							</div>
 						</div>
-				</section>
+					</div>
+				</div>
 			</div>
 		</section>
 	</section>
@@ -760,6 +812,7 @@
 		</div>
 	</section>
 
+	<jsp:include page="./footer.jsp" />
 
 </body>
 </html>
